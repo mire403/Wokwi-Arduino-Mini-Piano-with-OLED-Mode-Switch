@@ -111,12 +111,6 @@ Note: E4
 
 ## 🎓 Educational Value | 教学意义
 
-This project demonstrates:
-- Digital input handling with pull-up resistors
-- State-based mode control
-- Non-blocking timing design in embedded systems
-- Human–machine interaction via OLED display
-
 非常适合作为：
 - 嵌入式系统课程实验
 - Arduino 入门与进阶项目
