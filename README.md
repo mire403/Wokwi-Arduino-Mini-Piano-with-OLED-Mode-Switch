@@ -80,11 +80,13 @@ This ensures the system remains responsive and can exit demo mode instantly.
 ## 🖥️ OLED Display Content | OLED 显示内容
 
 Mode: Manual
+
 Note: C4
 
 or
 
 Mode: Demo
+
 Note: E4
 
 ---
