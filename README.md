@@ -79,3 +79,50 @@ This ensures the system remains responsive and can exit demo mode instantly.
 
 ## 🖥️ OLED Display Content | OLED 显示内容
 
+Mode: Manual
+Note: C4
+
+or
+
+Mode: Demo
+Note: E4
+
+---
+
+## 🧪 Simulation Platform | 仿真平台
+
+- 🌐 **Wokwi Online Simulator**
+- Board: Arduino Uno
+
+---
+
+## 📂 File Structure | 文件结构
+
+
+```bash
+├── mini-piano.ino
+├── pitches.h
+└── diagram.json
+```
+
+---
+
+## 🎓 Educational Value | 教学意义
+
+This project demonstrates:
+- Digital input handling with pull-up resistors
+- State-based mode control
+- Non-blocking timing design in embedded systems
+- Human–machine interaction via OLED display
+
+非常适合作为：
+- 嵌入式系统课程实验
+- Arduino 入门与进阶项目
+- 状态机与非阻塞设计示例
+
+---
+
+## ⭐ Star Support
+
+如果你觉得这个项目对你有帮助，请给仓库点一个 ⭐ Star！
+你的鼓励是我继续优化此项目的最大动力 😊
