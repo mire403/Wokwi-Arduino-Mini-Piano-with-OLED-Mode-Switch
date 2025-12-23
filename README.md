@@ -1,2 +1,81 @@
-# Wokwi-Arduino-Mini-Piano-with-OLED-Mode-Switch
-本项目基于Arduino Uno和Wokwi仿真平台，在示例的mini piano的基础上实现了切换手动演奏模式和自动演奏模式、通过SSD1306 OLED实时显示当前模式和音符，并采用基于millis()的非阻塞设计，保证模式切换的即时响应。
+# 🎹 Mini Piano with OLED & Mode Switch  
+## 基于 Arduino 的 OLED 显示多模式迷你电子钢琴
+
+---
+
+https://github.com/user-attachments/assets/3b03f5a1-47cc-4138-9220-01d30758ef2d
+
+
+## 📖 Project Overview | 项目简介
+
+This project implements a **mini electronic piano** based on **Arduino Uno**, simulated using **Wokwi**.  
+It supports **manual play mode** and **auto demo mode**, with a **SSD1306 OLED display** showing the current mode and note in real time.
+
+本项目基于 **Arduino Uno**，在 **Wokwi 在线仿真平台**上实现了一个迷你电子钢琴系统。  
+系统支持 **手动演奏模式** 和 **自动演奏模式**，并通过 **SSD1306 OLED 屏幕**实时显示当前工作模式和音符信息。
+
+---
+
+## ✨ Features | 功能特点
+
+- 🎼 8-key mini piano (C4 ~ C5)
+- 🔘 Mode switch button (Manual / Auto Demo)
+- 📺 SSD1306 OLED real-time display
+- ⏱️ Non-blocking auto play using `millis()`
+- ⚡ Instant mode switching without delay blocking
+
+---
+
+## 🔧 Hardware Components | 硬件组成
+
+| Component | Description |
+|---------|-------------|
+| Arduino Uno | Main controller |
+| Push Buttons × 8 | Piano keys |
+| Push Button × 1 | Mode switch |
+| Buzzer | Sound output |
+| SSD1306 OLED | Mode & note display |
+
+---
+
+## 🔌 Wiring Overview | 主要接线说明
+
+### OLED (I2C)
+
+| OLED Pin | Arduino Uno |
+|--------|-------------|
+| VCC | 5V |
+| GND | GND |
+| SDA | A4 |
+| SCL | A5 |
+
+### Mode Button
+
+| Button | Arduino Uno |
+|------|-------------|
+| One side | D2 |
+| Other side | GND |
+
+> Internal pull-up resistors are used (`INPUT_PULLUP`).
+
+---
+
+## 🧠 Software Design | 软件设计说明
+
+### 🔄 Mode Control Logic
+
+- `demoMode = false` → Manual Play Mode
+- `demoMode = true` → Auto Demo Mode
+- Mode toggled by detecting **button edge (HIGH → LOW)**
+
+### ⏱️ Non-blocking Auto Play
+
+Instead of using `delay()`, the auto demo mode uses `millis()` to control note timing.  
+This ensures the system remains responsive and can exit demo mode instantly.
+
+自动演奏模式采用基于 `millis()` 的非阻塞时间控制方式，避免了 `delay()` 导致的系统卡顿问题，使模式切换更加流畅、实时。
+
+---
+
+## 🖥️ OLED Display Content | OLED 显示内容
+
