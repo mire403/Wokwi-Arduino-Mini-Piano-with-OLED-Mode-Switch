@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 192.6, "left": 76.2, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 220,
+      "left": 380,
+      "rotate": 90,
+      "attrs": { "volume": "0.2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 57,
+      "left": 3,
+      "rotate": 90,
+      "attrs": { "color": "red", "key": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 57,
+      "left": 51,
+      "rotate": 90,
+      "attrs": { "color": "orange", "key": "2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 57,
+      "left": 99,
+      "rotate": 90,
+      "attrs": { "color": "yellow", "key": "3" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 57,
+      "left": 147,
+      "rotate": 90,
+      "attrs": { "color": "green", "key": "4" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": 57,
+      "left": 195,
+      "rotate": 90,
+      "attrs": { "color": "cyan", "key": "5" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn6",
+      "top": 57,
+      "left": 243,
+      "rotate": 90,
+      "attrs": { "color": "blue", "key": "6" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn7",
+      "top": 57,
+      "left": 300.6,
+      "rotate": 90,
+      "attrs": { "color": "purple", "key": "7" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn8",
+      "top": 57,
+      "left": 348.6,
+      "rotate": 90,
+      "attrs": { "color": "red", "key": "8" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn9",
+      "top": 275,
+      "left": -67.2,
+      "attrs": { "color": "white", "xray": "1" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -145.3, "left": -576.2, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 435.14,
+      "left": 240.23,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "buzzer:1", "black", [ "v-16", "*", "h-18" ] ],
+    [ "uno:8", "buzzer:2", "gold", [ "v-24", "*", "h-10" ] ],
+    [ "uno:12", "btn1:1.r", "red", [ "v-24", "h0" ] ],
+    [ "uno:GND.1", "btn1:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:11", "btn2:1.r", "orange", [ "v-32", "h0" ] ],
+    [ "uno:GND.1", "btn2:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:10", "btn3:1.r", "yellow", [ "v-38", "h0" ] ],
+    [ "uno:GND.1", "btn3:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:9", "btn4:1.r", "green", [ "v-46", "h20" ] ],
+    [ "uno:GND.1", "btn4:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:7", "btn5:1.r", "cyan", [ "v-56", "h0" ] ],
+    [ "uno:GND.1", "btn5:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:6", "btn6:1.r", "blue", [ "v-48", "h0" ] ],
+    [ "uno:GND.1", "btn6:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:5", "btn7:1.r", "purple", [ "v-40", "h0" ] ],
+    [ "uno:GND.1", "btn7:2.r", "black", [ "v-16", "h0" ] ],
+    [ "uno:4", "btn8:1.r", "red", [ "v-32", "h0" ] ],
+    [ "uno:GND.1", "btn8:2.r", "black", [ "v-16", "h0" ] ],
+    [ "btn9:1.r", "uno:2", "white", [ "v-163.2", "h312.9" ] ],
+    [ "btn9:2.r", "uno:GND.1", "black", [ "h29", "v-124.6", "h162.9" ] ],
+    [ "oled1:GND", "uno:GND.2", "black", [ "v-28.8", "h-32.7" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v-19.2", "h-51.65" ] ],
+    [ "uno:A4", "oled1:SDA", "green", [ "v38.3", "h-15.07" ] ],
+    [ "uno:A5", "oled1:SCL", "green", [ "v28.7", "h-34.4" ] ]
+  ],
+  "dependencies": {}
+}
